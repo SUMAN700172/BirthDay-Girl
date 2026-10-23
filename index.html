@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, My Love ❤️ | A Romantic Birthday Journey · 29 October 2026</title>
+  <meta name="description" content="A romantic multi-page birthday surprise website dedicated to my love as she celebrates her birthday on 29 October 2026.">
+  
+  <!-- Romantic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particle Atmosphere (Petals, Golden Twinkles, Hearts) -->
+  <canvas id="canvas-particles"></canvas>
+
+  <!-- ========================================================================
+       TOP APP HEADER & CHAPTER PROGRESSION BAR
+       ======================================================================== -->
+  <header class="app-header" id="app-header">
+    <div class="header-container">
+      
+      <!-- Brand & Project Title -->
+      <a href="#/welcome" class="header-brand" id="brand-link" title="For You, My Love">
+        <span class="brand-heart">❤️</span>
+        <span class="brand-title">For You, My Love</span>
+      </a>
+
+      <!-- Romantic Chapter Progress Tracker -->
+      <div class="chapter-tracker" id="chapter-tracker">
+        <div class="chapter-text-info">
+          <span class="chapter-badge" id="chapter-badge">Chapter 1 of 7</span>
+          <span class="chapter-name" id="chapter-name">The Mysterious Welcome</span>
+        </div>
+        
+        <!-- Interactive Chapter Navigation Dots -->
+        <nav class="chapter-dots-nav" id="chapter-dots-nav" aria-label="Chapter Progression">
+          <button class="chapter-dot active" data-page="1" title="Chapter 1: The Mysterious Welcome" aria-label="Chapter 1">
+            <span class="dot-number">1</span>
+          </button>
+          <button class="chapter-dot locked" data-page="2" title="Chapter 2: A Little Surprise" aria-label="Chapter 2">
+            <span class="dot-lock">🔒</span><span class="dot-number">2</span>
+          </button>
+          <button class="chapter-dot locked" data-page="3" title="Chapter 3: Just You, Being You" aria-label="Chapter 3">
+            <span class="dot-lock">🔒</span><span class="dot-number">3</span>
+          </button>
+          <button class="chapter-dot locked" data-page="4" title="Chapter 4: Our Little World" aria-label="Chapter 4">
+            <span class="dot-lock">🔒</span><span class="dot-number">4</span>
+          </button>
+          <button class="chapter-dot locked" data-page="5" title="Chapter 5: Things to Remember" aria-label="Chapter 5">
+            <span class="dot-lock">🔒</span><span class="dot-number">5</span>
+          </button>
+          <button class="chapter-dot locked" data-page="6" title="Chapter 6: A Letter From My Heart" aria-label="Chapter 6">
+            <span class="dot-lock">🔒</span><span class="dot-number">6</span>
+          </button>
+          <button class="chapter-dot locked" data-page="7" title="Chapter 7: The Final Surprise" aria-label="Chapter 7">
+            <span class="dot-lock">🔒</span><span class="dot-number">7</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="btn-header-action btn-cloud" id="btn-cloud-sync" onclick="openCloudSyncModal()" title="Lifetime Cloud Database & Sync">
+          <span class="icon" id="cloud-sync-icon">☁️</span>
+          <span class="text" id="cloud-sync-text">Cloud DB</span>
+          <span class="cloud-indicator-dot offline" id="cloud-indicator-dot"></span>
+        </button>
+
+        <button class="btn-header-action" id="btn-toggle-audio" onclick="toggleRomanticAudio()" title="Toggle Romantic Music">
+          <span class="icon" id="audio-icon">🎵</span>
+          <span class="text" id="audio-text">Music</span>
+        </button>
+
+        <button class="btn-header-action btn-customizer" onclick="openStoryEditor()" title="Customize Names, Dates & Photos">
+          <span class="icon">⚙️</span>
+          <span class="text">Customize</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       7 SEPARATE ROMANTIC PAGES (Full-Screen Dedicated Views)
+       ======================================================================== -->
+  <main class="pages-wrapper" id="pages-wrapper">
+
+    <!-- ======================================================================
+         PAGE 1: THE MYSTERIOUS WELCOME
+         ====================================================================== -->
+    <section class="page-view active" id="page-1" data-page-index="1" data-route="welcome">
+      <div class="page-inner mysterious-welcome-container">
+        
+        <div class="glow-orb glow-orb-welcome"></div>
+
+        <div class="welcome-card">
+          <div class="romantic-pill-badge" id="p1-badge">
+            <span>✨</span>
+            <span>A SPECIAL JOURNEY FOR YOU</span>
+            <span>✨</span>
+          </div>
+
+          <!-- Hero Glowing Portrait on Level 1 -->
+          <div class="welcome-portrait-stage" id="p1-portrait-stage">
+            <div class="welcome-portrait-ring">
+              <img src="photo1.jpeg" alt="Priyanka" id="p1-portrait-img" class="welcome-portrait-img">
+              <span class="welcome-portrait-sparkle">💖</span>
+            </div>
+          </div>
+
+          <h1 class="welcome-heading" id="p1-greeting">
+            Hey, beautiful... <span class="heart-pulse">❤️</span>
+          </h1>
+
+          <div class="welcome-lines">
+            <p class="welcome-line line-1" id="p1-line1">I made something special for you.</p>
+            <p class="welcome-line line-2" id="p1-line2">But this little surprise has a few secrets.</p>
+            <p class="welcome-line line-question" id="p1-question">Are you ready to discover them?</p>
+          </div>
+
+          <div class="welcome-action">
+            <button class="btn-journey-primary" id="btn-begin-journey" onclick="advanceToNextPage(2)">
+              <span class="btn-text" id="p1-btn-text">LET'S BEGIN ❤️</span>
+              <span class="btn-sparkle">✨</span>
+            </button>
+          </div>
+
+          <div class="welcome-footer-note">
+            <span>🌹 Chapter 1 of 7 · Unlock each surprise one by one</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 2: A LITTLE SURPRISE FOR YOU
+         ====================================================================== -->
+    <section class="page-view" id="page-2" data-page-index="2" data-route="surprise">
+      <div class="page-inner surprise-reveal-container">
+        
+        <div class="glow-orb glow-orb-pink"></div>
+
+        <div class="surprise-card">
+          <div class="romantic-pill-badge" id="p2-badge">
+            <span>🌸</span>
+            <span>CHAPTER 2 · A SOFT TRUTH</span>
+            <span>🌸</span>
+          </div>
+
+          <h2 class="surprise-title" id="p2-heading">
+            Before anything else, there's something I want you to know...
+          </h2>
+
+          <!-- Interactive Beating Heart Visual Reveal -->
+          <div class="heart-reveal-stage" id="heart-reveal-stage" onclick="revealHeartMessage()">
+            <div class="illuminated-heart" id="illuminated-heart">
+              <span class="heart-core">💖</span>
+              <div class="heart-rings">
+                <span class="ring ring-1"></span>
+                <span class="ring ring-2"></span>
+                <span class="ring ring-3"></span>
+              </div>
+            </div>
+            <div class="heart-reveal-prompt" id="heart-reveal-prompt">
+              <span>Touch the heart to reveal what's inside ✨</span>
+            </div>
+          </div>
+
+          <!-- Revealed Romantic Quote & Message -->
+          <div class="surprise-message-box revealed" id="surprise-message-box">
+            <div class="surprise-photo-frame" id="p2-photo-frame">
+              <img src="photo2.jpeg" alt="A Soft Truth" id="p2-photo-img" class="surprise-photo-img">
+            </div>
+            <blockquote class="romantic-quote" id="p2-quote">
+              "You make my world more beautiful just by being in it."
+            </blockquote>
+            <p class="romantic-paragraph" id="p2-message">
+              Out of 8 billion people on this planet, knowing your heart, sharing laughter, and getting to love you is the greatest gift of my life. Every smile of yours brings peace to my world.
+            </p>
+          </div>
+
+          <div class="page-navigation-footer">
+            <p class="next-hint" id="p2-hint">There's more waiting for you...</p>
+            <button class="btn-journey-primary" id="btn-goto-p3" onclick="advanceToNextPage(3)">
+              <span class="btn-text" id="p2-btn-text">CONTINUE TO YOUR SURPRISE →</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 3: JUST YOU, BEING YOU (Her Personal Photo Gallery)
+         ====================================================================== -->
+    <section class="page-view" id="page-3" data-page-index="3" data-route="her">
+      <div class="page-inner her-gallery-container">
+        
+        <div class="section-header-centered">
+          <div class="romantic-pill-badge" id="p3-badge">
+            <span>✨</span>
+            <span>CHAPTER 3 · HER RADIANCE</span>
+            <span>✨</span>
+          </div>
+
+          <h2 class="section-main-heading" id="p3-heading">
+            How can someone be this beautiful? ❤️
+          </h2>
+          
+          <p class="section-sub-heading" id="p3-subtitle">
+            A gallery dedicated exclusively to your smile, your eyes, and the effortless way you light up every room you walk into.
+          </p>
+
+          <div class="gallery-controls-bar">
+            <button class="btn-secondary-action" onclick="openUploadModal('her')">
+              <span>📸 Add Her Photograph</span>
+            </button>
+            <span class="gallery-counter" id="her-photo-counter">Showing 2 photographs</span>
+          </div>
+        </div>
+
+        <!-- Her Photos Grid -->
+        <div class="her-photo-grid" id="her-photo-grid">
+          <!-- Rendered dynamically by logic.js -->
+        </div>
+
+        <div class="page-navigation-footer card-style-footer">
+          <p class="next-hint" id="p3-bottom-note">
+            These pictures are beautiful, but there's something even more special ahead.
+          </p>
+          <button class="btn-journey-primary" id="btn-goto-p4" onclick="advanceToNextPage(4)">
+            <span class="btn-text" id="p3-btn-text">DISCOVER THE NEXT PAGE →</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 4: OUR LITTLE WORLD (Couple Memories Scrapbook)
+         ====================================================================== -->
+    <section class="page-view" id="page-4" data-page-index="4" data-route="our-memories">
+      <div class="page-inner scrapbook-container">
+        
+        <div class="section-header-centered">
+          <div class="romantic-pill-badge" id="p4-badge">
+            <span>💑</span>
+            <span>CHAPTER 4 · OUR SCRAPBOOK</span>
+            <span>💑</span>
+          </div>
+
+          <h2 class="section-main-heading" id="p4-heading">
+            Our Little World ✨
+          </h2>
+
+          <blockquote class="scrapbook-hero-quote" id="p4-quote">
+            "Every picture tells a story. And my favorite stories are the ones that have you in them."
+          </blockquote>
+
+          <div class="gallery-controls-bar">
+            <button class="btn-secondary-action" onclick="openUploadModal('couple')">
+              <span>📷 Add Couple Memory</span>
+            </button>
+            <span class="gallery-counter" id="couple-photo-counter">Showing 3 memories</span>
+          </div>
+        </div>
+
+        <!-- Polaroid Scrapbook Gallery -->
+        <div class="scrapbook-polaroid-grid" id="scrapbook-polaroid-grid">
+          <!-- Rendered dynamically by logic.js -->
+        </div>
+
+        <div class="page-navigation-footer card-style-footer">
+          <p class="next-hint" id="p4-bottom-note">
+            One more little surprise is waiting...
+          </p>
+          <button class="btn-journey-primary" id="btn-goto-p5" onclick="advanceToNextPage(5)">
+            <span class="btn-text" id="p4-btn-text">SHOW ME WHAT'S NEXT ❤️</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 5: THE THINGS I WANT YOU TO KNOW
+         ====================================================================== -->
+    <section class="page-view" id="page-5" data-page-index="5" data-route="reasons">
+      <div class="page-inner reasons-container">
+        
+        <div class="section-header-centered">
+          <div class="romantic-pill-badge" id="p5-badge">
+            <span>💌</span>
+            <span>CHAPTER 5 · FROM MY SOUL</span>
+            <span>💌</span>
+          </div>
+
+          <h2 class="section-main-heading" id="p5-heading">
+            Wishes & Truths for My Beautiful Girl
+          </h2>
+
+          <p class="section-sub-heading" id="p5-subtitle">
+            Whenever the world feels loud or overwhelming, I hope you look at these pictures and remember these heartfelt truths:
+          </p>
+
+          <!-- Girlfriend Profile Spotlight Banner -->
+          <div class="gf-profile-spotlight" id="gf-profile-spotlight">
+            <div class="gf-profile-avatar-box">
+              <div class="gf-avatar-aura"></div>
+              <img src="photo1.jpeg" alt="Priyanka" id="p5-profile-avatar" class="gf-avatar-img">
+              <span class="gf-crown-badge">👑 Birthday Queen</span>
+            </div>
+            <div class="gf-profile-details">
+              <div class="gf-profile-header-row">
+                <h3 class="gf-profile-name" id="p5-gf-name">Priyanka ❤️</h3>
+                <span class="gf-verified-badge" title="Verified Queen">✓</span>
+              </div>
+              <p class="gf-profile-tagline" id="p5-gf-tagline">To the most gorgeous girl who turned my entire world into poetry...</p>
+              <div class="gf-profile-tags">
+                <span class="gf-pill-tag">🌸 20th Birthday Celebration</span>
+                <span class="gf-pill-tag">✨ My Favorite Person</span>
+                <span class="gf-pill-tag">💖 Loved Beyond Words</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reasons-controls-bar">
+            <button class="btn-secondary-action" onclick="addNewReasonPrompt()">
+              <span>✨ Add a Personal Wish</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Emotional Message Cards Grid -->
+        <div class="reasons-cards-grid" id="reasons-cards-grid">
+          <!-- Rendered dynamically by logic.js -->
+        </div>
+
+        <div class="page-navigation-footer card-style-footer">
+          <p class="next-hint" id="p5-bottom-note">
+            But I saved something more personal for you.
+          </p>
+          <button class="btn-journey-primary" id="btn-goto-p6" onclick="advanceToNextPage(6)">
+            <span class="btn-text" id="p5-btn-text">OPEN YOUR LETTER 💌</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 6: A LETTER FROM MY HEART
+         ====================================================================== -->
+    <section class="page-view" id="page-6" data-page-index="6" data-route="love-letter">
+      <div class="page-inner love-letter-container">
+        
+        <div class="section-header-centered">
+          <div class="romantic-pill-badge" id="p6-badge">
+            <span>🕊️</span>
+            <span>CHAPTER 6 · WRITTEN FOR YOU</span>
+            <span>🕊️</span>
+          </div>
+
+          <h2 class="section-main-heading" id="p6-prompt-title">
+            There's something I've wanted to tell you.
+          </h2>
+
+          <p class="section-sub-heading" id="p6-prompt-subtitle">
+            Click to break the wax seal and open the letter written just for your eyes...
+          </p>
+        </div>
+
+        <!-- Interactive 3D Envelope & Unfolding Letter -->
+        <div class="envelope-stage" id="envelope-stage">
+          
+          <div class="envelope-box" id="envelope-box">
+            <!-- Envelope Flap -->
+            <div class="envelope-flap" id="envelope-flap"></div>
+            
+            <!-- Wax Seal Button -->
+            <button class="envelope-wax-seal" id="envelope-wax-seal" onclick="openLoveLetterEnvelope()" title="Click to open letter">
+              <span class="seal-icon">💌</span>
+              <span class="seal-text">OPEN</span>
+            </button>
+
+            <!-- Letter Sheet (Slides out) -->
+            <div class="letter-sheet" id="letter-sheet">
+              <div class="letter-paper-header">
+                <span class="letter-stamp">❤️ 29.10.2026</span>
+                <button class="btn-edit-letter-inline" onclick="openLetterEditorModal()" title="Edit this letter">
+                  ✏️ Edit Letter
+                </button>
+              </div>
+
+              <!-- Romantic Keepsake Photo tucked inside letter -->
+              <div class="letter-keepsake-frame" id="letter-keepsake-frame">
+                <div class="letter-keepsake-tape"></div>
+                <img src="photo5.jpeg" alt="Special Memory" id="letter-keepsake-img" class="letter-keepsake-img">
+                <span class="letter-keepsake-caption">Forever in my heart ✨</span>
+              </div>
+
+              <div class="letter-salutation" id="letter-salutation">
+                My Dearest Priyanka,
+              </div>
+
+              <div class="letter-body-paragraphs" id="letter-body-paragraphs">
+                <!-- Injected from config -->
+              </div>
+
+              <div class="letter-closing-wrap">
+                <p class="letter-closing" id="letter-closing">With all my love and devotion,</p>
+                <p class="letter-signature" id="letter-signature">Forever & Always Yours ❤️</p>
+              </div>
+            </div>
+
+            <!-- Envelope Pocket Front -->
+            <div class="envelope-pocket"></div>
+          </div>
+
+        </div>
+
+        <!-- Post-reading Action Bar -->
+        <div class="page-navigation-footer letter-nav-footer" id="letter-nav-footer">
+          <p class="next-hint" id="p6-bottom-note">
+            There's just one last page...
+          </p>
+          <button class="btn-journey-primary" id="btn-goto-p7" onclick="advanceToNextPage(7)">
+            <span class="btn-text" id="p6-btn-text">REVEAL YOUR FINAL SURPRISE ❤️</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 7: THE ULTIMATE BIRTHDAY SURPRISE (Grand Finale)
+         ====================================================================== -->
+    <section class="page-view" id="page-7" data-page-index="7" data-route="final-surprise">
+      <div class="page-inner finale-container">
+        
+        <!-- Stage A: Cinematic Darkness & Poetic Fade-in Reveal -->
+        <div class="finale-cinematic-intro" id="finale-cinematic-intro">
+          <p class="intro-line line-1" id="intro-line-1">You've reached the end of this little journey...</p>
+          <p class="intro-line line-2" id="intro-line-2">But the most beautiful part was never the website.</p>
+          <div class="intro-pause-indicator" id="intro-pause">✨</div>
+          <p class="intro-line line-3" id="intro-line-3">It's the person this entire surprise was made for.</p>
+        </div>
+
+        <!-- Stage B: Grand Celebration Reveal -->
+        <div class="finale-celebration-stage" id="finale-celebration-stage">
+          
+          <div class="finale-header-sparkle">
+            <span class="badge-sparkle">✨ CELEBRATING 20 WONDERFUL YEARS · 29 OCTOBER 2026 ✨</span>
+          </div>
+
+          <h1 class="finale-main-title" id="finale-main-title">
+            HAPPY BIRTHDAY, <br>
+            <span class="highlight-gold" id="finale-name-span">MY LOVE ❤️</span>
+          </h1>
+
+          <div class="finale-date-tag" id="finale-date-tag">
+            <span>🎂 29 OCTOBER 2026 🎂</span>
+          </div>
+
+          <!-- Interactive Birthday Cake & Candles -->
+          <div class="cake-celebration-container" id="cake-celebration">
+            <div class="cake-header-pill">
+              <span class="cake-pill-icon">✨</span>
+              <span class="cake-pill-text" id="cake-pill-text">Priyanka's 20th Birthday Cake</span>
+              <span class="cake-pill-icon">🎂</span>
+            </div>
+
+            <!-- Cake Stage with Fluid Candles & Animations -->
+            <div class="cake-stage" id="cake-stage" onclick="tapCake(event)" title="Tap anywhere on cake for love bursts!">
+              <div class="cake-shimmer-sweep" id="cake-shimmer"></div>
+
+              <picture class="cake-picture">
+                <source srcset="cake.webp" type="image/webp">
+                <source srcset="cake.jpg" type="image/jpeg">
+                <img 
+                  src="cake.webp" 
+                  alt="Priyanka's 20th Birthday Red Velvet Cake" 
+                  class="cake-img" 
+                  id="cake-img"
+                  width="1200" 
+                  height="798" 
+                  loading="eager" 
+                  fetchpriority="high"
+                  decoding="async"
+                >
+              </picture>
+
+              <div class="cake-ambient-glow" id="cake-ambient-glow"></div>
+
+              <!-- Realistic 20th Birthday Golden Numerals & Candles -->
+              <div class="cake-candles-cluster" id="cake-candles-cluster" aria-label="Birthday Candles">
+                <div class="candle-unit" id="candle-unit-2">
+                  <div class="smoke-puff" id="smoke-1">
+                    <span class="smoke-particle p1"></span>
+                    <span class="smoke-particle p2"></span>
+                    <span class="smoke-particle p3"></span>
+                  </div>
+                  <div class="candle-flame" id="flame-1"></div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-numeral">2</div>
+                </div>
+
+                <div class="candle-unit" id="candle-unit-0">
+                  <div class="smoke-puff" id="smoke-2">
+                    <span class="smoke-particle p1"></span>
+                    <span class="smoke-particle p2"></span>
+                    <span class="smoke-particle p3"></span>
+                  </div>
+                  <div class="candle-flame" id="flame-2"></div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-numeral">0</div>
+                </div>
+              </div>
+
+              <div class="cake-celebration-aura" id="cake-celebration-aura"></div>
+
+              <div class="cake-tap-badge">
+                <span>💖 Tap cake for love burst</span>
+              </div>
+            </div>
+
+            <div class="cake-action-row">
+              <button class="cake-btn" id="btn-blow-candles" onclick="blowCandles()">
+                <span class="btn-icon">🕯️</span>
+                <span>Make a Wish & Blow the Candles</span>
+              </button>
+              <button class="cake-btn cake-btn-relight" id="btn-relight-candles" onclick="relightCandles()" style="display: none;">
+                <span class="btn-icon">✨</span>
+                <span>Relight Candles & Wish Again</span>
+              </button>
+            </div>
+
+            <div class="cake-message-box" id="cake-message">
+              Make your 20th birthday wish for October 29th before blowing the candles, Priyanka... ✨
+            </div>
+          </div>
+
+          <!-- Favorite Couple Photograph Spotlight Frame -->
+          <div class="finale-spotlight-photo" id="finale-spotlight-photo">
+            <div class="spotlight-frame">
+              <img src="photo4.jpeg" alt="Our Favorite Photograph" id="finale-couple-img">
+              <div class="spotlight-caption" id="finale-couple-caption">
+                <span>"With you, every single second is a memory I treasure." ❤️</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heartfelt Ending Message -->
+          <div class="finale-heartfelt-card">
+            <p class="final-paragraph" id="finale-final-message">
+              "Today is your special day, but having you in my life is a gift I appreciate every single second."
+            </p>
+            <p class="final-signature" id="finale-sender-signature">
+              Forever and always, with all my love ❤️
+            </p>
+          </div>
+
+          <!-- Restart Story Feature -->
+          <div class="finale-restart-wrapper">
+            <button class="btn-restart-story" id="btn-restart-story" onclick="restartOurStory()">
+              <span class="btn-icon">↻</span>
+              <span class="btn-text">START OUR STORY AGAIN ↻</span>
+            </button>
+            <p class="restart-note">Clicking will return to Chapter 1 so you can experience this journey anytime.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       MODAL 1: HIGH FIDELITY PHOTO LIGHTBOX
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" title="Close Viewer">✕</button>
+      
+      <button class="lightbox-nav-btn lightbox-prev" onclick="prevLightboxPhoto()" title="Previous Photo">❮</button>
+      <button class="lightbox-nav-btn lightbox-next" onclick="nextLightboxPhoto()" title="Next Photo">❯</button>
+
+      <div class="lightbox-media-wrap">
+        <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <div class="lightbox-meta">
+          <span class="lightbox-date" id="lightbox-date"></span>
+          <span class="lightbox-index" id="lightbox-index"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: PHOTO UPLOADER (For Her Photos & Couple Photos)
+       ======================================================================== -->
+  <div class="custom-modal" id="upload-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" onclick="closeUploadModal()"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="upload-modal-title">📸 Add New Photograph</h3>
+        <button class="modal-close-btn" onclick="closeUploadModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <input type="file" id="photo-file-input" accept="image/*" style="display: none;">
+        
+        <div class="upload-dropzone" id="upload-dropzone" onclick="document.getElementById('photo-file-input').click()">
+          <div class="dropzone-icon">🖼️</div>
+          <div class="dropzone-text">Click or drag & drop a photograph here</div>
+          <div class="dropzone-hint">Supports JPEG, PNG, WebP</div>
+        </div>
+
+        <div class="upload-preview-wrap" id="upload-preview-wrap" style="display: none;">
+          <img src="" alt="Preview" id="upload-preview-img">
+          <button class="btn-remove-preview" onclick="clearUploadPreview()">Remove</button>
+        </div>
+
+        <div class="form-group">
+          <label for="photo-caption-input">Romantic Caption</label>
+          <input type="text" id="photo-caption-input" class="form-input" placeholder="e.g. The smile that made my entire day...">
+        </div>
+
+        <div class="form-group" id="photo-date-group">
+          <label for="photo-date-input">Date or Memory Tag (Optional)</label>
+          <input type="text" id="photo-date-input" class="form-input" placeholder="e.g. October 29th, Our First Trip">
+        </div>
+
+        <div class="form-group">
+          <label for="photo-target-category">Add To</label>
+          <select id="photo-target-category" class="form-select">
+            <option value="her">Chapter 3: Just You, Being You (Her Photos)</option>
+            <option value="couple">Chapter 4: Our Little World (Couple Memories)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeUploadModal()">Cancel</button>
+        <button class="btn-journey-primary" onclick="submitUploadedPhoto()">Save Photograph ❤️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 3: STORY & PERSONALIZATION EDITOR DRAWER
+       ======================================================================== -->
+  <div class="editor-drawer" id="editor-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" onclick="closeStoryEditor()"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3 class="drawer-title">⚙️ Personalize Your Romantic Story</h3>
+        <button class="drawer-close-btn" onclick="closeStoryEditor()">✕</button>
+      </div>
+
+      <div class="drawer-body">
+        <p class="drawer-tip">
+          💡 You can customize her name, dates, letter, and reasons. All changes are saved instantly to your browser. You can also export the configuration code to keep permanently!
+        </p>
+
+        <!-- Cloud Database Status & Quick Access -->
+        <div class="drawer-cloud-section">
+          <div class="drawer-cloud-header">
+            <span class="drawer-cloud-title">☁️ Lifetime Cloud Database</span>
+            <span class="drawer-cloud-status offline" id="drawer-cloud-status-badge">
+              <span class="status-dot yellow"></span> Local Storage
+            </span>
+          </div>
+          <p class="drawer-cloud-desc">
+            Sync uploaded photos across both phones in real time with Google Firebase.
+          </p>
+          <button class="btn-drawer-cloud" onclick="closeStoryEditor(); openCloudSyncModal();">
+            ☁️ Manage Cloud Connection
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-recipient-name">Her Name</label>
+          <input type="text" id="cfg-recipient-name" class="form-input" value="Priyanka">
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-sender-name">Your Name / Signature</label>
+          <input type="text" id="cfg-sender-name" class="form-input" value="Forever & Always Yours ❤️">
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-birthday-date">Birthday Date</label>
+          <input type="text" id="cfg-birthday-date" class="form-input" value="29 October 2026">
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-letter-paragraphs">Love Letter (Paragraphs separated by blank lines)</label>
+          <textarea id="cfg-letter-paragraphs" class="form-textarea" rows="6"></textarea>
+        </div>
+
+        <div class="drawer-actions-grid">
+          <button class="btn-drawer-action" onclick="saveStoryEditorChanges()">💾 Save Changes</button>
+          <button class="btn-drawer-action btn-export" onclick="exportConfigCode()">📋 Copy Config Code</button>
+          <button class="btn-drawer-action btn-reset" onclick="resetToDefaultConfig()">↺ Reset to Defaults</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 4: CLOUD DATABASE & SYNC MANAGER (Firebase Lifetime Database)
+       ======================================================================== -->
+  <div class="custom-modal" id="cloud-sync-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" onclick="closeCloudSyncModal()"></div>
+    <div class="modal-dialog cloud-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 class="modal-title" id="cloud-modal-title">☁️ Lifetime Cloud Database</h3>
+          <p class="modal-subtitle">Real-time photo synchronization powered by Google Firebase</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeCloudSyncModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body cloud-modal-body">
+        <!-- Live Status Pill Banner -->
+        <div class="cloud-status-banner" id="cloud-modal-status-banner">
+          <div class="status-indicator-badge offline" id="cloud-sync-status-badge">
+            <span class="status-dot yellow"></span> Local Storage (Offline Mode)
+          </div>
+          <p class="cloud-status-explainer" id="cloud-status-explainer">
+            Photos you upload right now are saved safely on this device. Connect your free Firebase project below to make all photos sync to her phone in real time and stay saved for a lifetime!
+          </p>
+        </div>
+
+        <!-- Quick 1-Click Paste Firebase Object -->
+        <div class="cloud-quick-paste-box">
+          <label for="cloud-paste-snippet" class="form-label">
+            <span>🪄 <strong>Quick Auto-Fill (Recommended)</strong></span>
+            <span class="label-hint">Paste your entire <code>firebaseConfig = { ... }</code> snippet below</span>
+          </label>
+          <div class="quick-paste-row">
+            <textarea id="cloud-paste-snippet" class="form-textarea cloud-snippet-textarea" rows="3" placeholder="Paste full config snippet from Firebase Console here:&#10;const firebaseConfig = {&#10;  apiKey: &quot;AIzaSy...&quot;,&#10;  projectId: &quot;birthday-priyanka&quot;,&#10;  ...&#10;};"></textarea>
+            <button type="button" class="btn-parse-snippet" onclick="parseAndApplyFirebaseSnippet()">
+              ⚡ Auto-Fill Fields
+            </button>
+          </div>
+        </div>
+
+        <!-- Individual Config Inputs Grid -->
+        <details class="cloud-manual-details" id="cloud-manual-details" open>
+          <summary class="cloud-details-summary">⚙️ Detailed Configuration Keys</summary>
+          <div class="cloud-inputs-grid">
+            <div class="form-group">
+              <label for="fb-apiKey">API Key (apiKey) <span class="required">*</span></label>
+              <input type="text" id="fb-apiKey" class="form-input" placeholder="AIzaSy...">
+            </div>
+            <div class="form-group">
+              <label for="fb-projectId">Project ID (projectId) <span class="required">*</span></label>
+              <input type="text" id="fb-projectId" class="form-input" placeholder="birthday-priyanka">
+            </div>
+            <div class="form-group">
+              <label for="fb-authDomain">Auth Domain (authDomain)</label>
+              <input type="text" id="fb-authDomain" class="form-input" placeholder="birthday-priyanka.firebaseapp.com">
+            </div>
+            <div class="form-group">
+              <label for="fb-storageBucket">Storage Bucket (storageBucket)</label>
+              <input type="text" id="fb-storageBucket" class="form-input" placeholder="birthday-priyanka.appspot.com">
+            </div>
+            <div class="form-group">
+              <label for="fb-messagingSenderId">Sender ID (messagingSenderId)</label>
+              <input type="text" id="fb-messagingSenderId" class="form-input" placeholder="1234567890">
+            </div>
+            <div class="form-group">
+              <label for="fb-appId">App ID (appId)</label>
+              <input type="text" id="fb-appId" class="form-input" placeholder="1:1234567890:web:abcdef">
+            </div>
+          </div>
+        </details>
+
+        <!-- Quick 2-Minute Help Accordion -->
+        <details class="cloud-guide-accordion">
+          <summary class="guide-summary">📖 Need free Firebase keys? Click for 2-minute setup guide</summary>
+          <div class="guide-steps-content">
+            <ol class="guide-steps-list">
+              <li>Open <a href="https://console.firebase.google.com" target="_blank" rel="noopener">Firebase Console (100% Free)</a> and click <strong>Add project</strong>.</li>
+              <li>Click the Web icon <code>&lt;/&gt;</code> to register an app. Copy the <code>firebaseConfig</code> object.</li>
+              <li>Under <strong>Build</strong> in the left menu, enable <strong>Firestore Database</strong> (Start in Test Mode).</li>
+              <li>Under <strong>Build</strong>, enable <strong>Storage</strong> (Start in Test Mode).</li>
+              <li>Paste the config snippet into the box above and click <strong>Save &amp; Connect Cloud</strong>!</li>
+            </ol>
+            <p class="guide-note">💡 See <a href="FIREBASE_SETUP_GUIDE.md" target="_blank">FIREBASE_SETUP_GUIDE.md</a> for detailed instructions.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="modal-footer cloud-modal-footer">
+        <button class="btn-secondary" onclick="closeCloudSyncModal()">Cancel</button>
+        <button class="btn-test-cloud" id="btn-test-cloud" onclick="testCloudConnection()">🧪 Test Connection</button>
+        <button class="btn-disconnect-cloud" id="btn-disconnect-cloud" onclick="disconnectCloudConfig()" style="display: none;">Disconnect</button>
+        <button class="btn-journey-primary" onclick="saveCloudConfigFromUI()">💾 Save &amp; Connect Cloud ❤️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ROMANTIC TOAST NOTIFICATION CONTAINER
+       ======================================================================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Google Firebase SDK (Free Lifetime Cloud Database & Storage) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage-compat.js"></script>
+
+  <!-- Cloud Database Engine & Application Scripts -->
+  <script src="firebase-config.js"></script>
+  <script src="database.js"></script>
+  <script src="config.js"></script>
+  <script src="logic.js"></script>
+</body>
+</html>

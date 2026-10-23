@@ -1,0 +1,34 @@
+# Dependencies & package caches
+node_modules/
+package-lock.json
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# Build & cache directories
+dist/
+build/
+.cache/
+*.tmp
+*.temp
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# Editor & IDE configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Duplicate workspace folder
+New folder/
+
